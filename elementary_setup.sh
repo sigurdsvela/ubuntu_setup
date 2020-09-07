@@ -74,4 +74,4 @@ dropbox start
 ## .profile.d
 ## -- Run all .sh files from .profile.d/* in .profile
 mkdir ~/.profile.d
-echo "\n for f in $(ls -d -- ~/.profile.d/*.sh); do \"~/.profile.d/$f\"; done \n"
+echo "\n for f in $(ls -d -- ~/.profile.d/*.sh); do \"~/.profile.d/$f\"; done \n" >> ~/.bashrc
