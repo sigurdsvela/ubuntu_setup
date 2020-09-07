@@ -68,3 +68,9 @@ dropbox start
 ## -- Run all .sh files from .profile.d/* in .profile
 mkdir ~/.profile.d
 echo "\n for f in $(ls -d -- ~/.profile.d/*.sh); do \"~/.profile.d/$f\"; done \n"
+
+
+
+## Setup git
+git config --global user.email "sigurdbergsvela@gmail.com"
+git config --gloabl user.name "Sigurd Berg Svela"
