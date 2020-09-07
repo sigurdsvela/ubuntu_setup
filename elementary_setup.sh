@@ -5,6 +5,9 @@ echo "Installing General"
 
 ## Git	
 sudo apt install git -y
+## Setup git
+git config --global user.email "sigurdbergsvela@gmail.com"
+git config --gloabl user.name "Sigurd Berg Svela"
 
 ## add-apt-repository
 sudo apt install software-properties-common -y
@@ -14,9 +17,14 @@ sudo dpkg --add-architecture i386
 
 sudo apt install gnome-disk-utility -y
 
+## Install and setup SSH
 sudo apt install openssh-server openssh-client -y
 sudo system enable ssh
 ssh-keygen
+
+## Setup XKB
+echo "Setup XKB mac layout"
+./xkb_layout/setup.sh
 
 
 ## Nvidia Drivers
@@ -47,14 +55,13 @@ sudo apt install --install-recommends winehq-stable -y
 echo "Installing Lutris"
 sudo add-apt-repository ppa:lutris-team/lutris
 sudo apt-get update
-sudo apt-get install lutris
+sudo apt-get install lutris -y
 
 
 ## Snap Packages
-sudo apt install snapd
+sudo apt install snapd -y
 sudo snap install spotify
 sudo snap install --classic code
-sudo apt install snapd
 
 
 ## Dropbox
@@ -68,9 +75,3 @@ dropbox start
 ## -- Run all .sh files from .profile.d/* in .profile
 mkdir ~/.profile.d
 echo "\n for f in $(ls -d -- ~/.profile.d/*.sh); do \"~/.profile.d/$f\"; done \n"
-
-
-
-## Setup git
-git config --global user.email "sigurdbergsvela@gmail.com"
-git config --gloabl user.name "Sigurd Berg Svela"
