@@ -76,6 +76,8 @@ dropbox start
 sudo apt install iperf3 -y
 sudo apt install speedtest-cli
 
+## Install Deja-Dup (Backup Software)
+sudo snap install deja-dup --classic
 
 ## Install xkeysnail
 sudo apt install python3-pip
