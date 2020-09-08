@@ -72,6 +72,11 @@ sudo apt install dropbox python-gpgme -y
 dropbox start
 
 
+## Network test
+sudo apt install iperf3 -y
+sudo apt install speedtest-cli
+
+
 ## Install xkeysnail
 sudo apt install python3-pip
 sudo pip3 install xkeysnail
