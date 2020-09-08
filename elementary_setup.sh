@@ -71,6 +71,11 @@ sudo apt update
 sudo apt install dropbox python-gpgme -y
 dropbox start
 
+
+## Install xkeysnail
+sudo apt install python3-pip
+sudo pip3 install xkeysnail
+
 ## .profile.d
 ## -- Run all .sh files from .profile.d/* in .profile
 mkdir ~/.profile.d

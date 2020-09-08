@@ -1,0 +1,15 @@
+[Unit]
+Description=xkeysnail
+
+[Service]
+Type=simple
+KillMode=process
+ExecStart=/usr/bin/sudo /usr/local/bin/xkeysnail --quiet --watch /home/sigsve/eos_setup/xkeysnail.config.py
+ExecStop=/usr/bin/sudo /usr/bin/killall xkeysnail
+Restart=on-failure
+RestartSec=3
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=graphical.target
+
