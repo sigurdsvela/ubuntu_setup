@@ -3,7 +3,7 @@ xkb_symbols "mac_custom" {
     include "no(mac_nodeadkeys)"
     name[Group1]= "Norwegian (Macintosh Custom)";
 
-    key <BKSL> {  [        at,   diaeresis,     U0027,      U0027] };
+    key <BKSL> {  [        at,   astrix,     U0027,      U0027] };
     key <AE04>	{ [         4,   dollar,       EuroSign,       dollar ]	};
 };
 
