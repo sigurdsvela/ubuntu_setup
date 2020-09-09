@@ -1,0 +1,7 @@
+label: Docker
+ckey: https://download.docker.com/linux/ubuntu/gpg
+repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+packages: 
+	- docker-ce
+	- docker-ce-cli
+	- containerd.io

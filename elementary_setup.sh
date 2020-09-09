@@ -72,9 +72,11 @@ sudo apt install dropbox python-gpgme -y
 dropbox start
 
 
-## Network test
+## Network tools
 sudo apt install iperf3 -y
 sudo apt install speedtest-cli
+sudo apt install net-tools
+
 
 ## Install Deja-Dup (Backup Software)
 sudo snap install deja-dup --classic

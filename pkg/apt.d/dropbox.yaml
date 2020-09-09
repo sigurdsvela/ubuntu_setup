@@ -1,0 +1,9 @@
+label: Dropbox
+repo: "deb [arch=i386,amd64] http://linux.dropbox.com/ubuntu bionic main"
+key:
+	keyserver: pgp.mit.edu
+	recv-keys: 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
+packages:
+	- dropbox
+depends:
+	python-gpgme

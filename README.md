@@ -5,3 +5,5 @@
 
 
 - [ ] setup and use .dotfile mapper file to symlink all dotfiles
+
+- [ ] Install packages from the YAML files
