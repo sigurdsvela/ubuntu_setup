@@ -21,18 +21,3 @@ define_keymap(None, {
 	K("LSuper-SPACE"): K("LC-SPACE"),
 	K("LC-SPACE"): K("LSuper-SPACE"),
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
