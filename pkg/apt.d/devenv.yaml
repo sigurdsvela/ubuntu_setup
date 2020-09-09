@@ -1,5 +1,2 @@
 label: Development Environment
 packages:
-	- openssh-server
-	- openssh-client
-	- git

@@ -1,3 +1,6 @@
 packages:
 	- spotify
-	- code [--classic]
+	- code
+		- --classic
+	- deja-dup
+		- --classic
