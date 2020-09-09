@@ -1,0 +1,1 @@
+./xhost-enable.conf: /etc/lightdm/lightdm.conf.d/xhost-enable.conf
