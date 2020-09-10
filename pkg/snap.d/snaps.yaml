@@ -1,6 +1,0 @@
-packages:
-	- spotify
-	- code
-		- --classic
-	- deja-dup
-		- --classic

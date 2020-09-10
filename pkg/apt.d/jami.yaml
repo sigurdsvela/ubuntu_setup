@@ -6,7 +6,8 @@
 label: Jami VoIP
 ckey: ['https://dl.jami.net/public-key.gpg', '/usr/share/keyrings/jami-archive-keyring.gpg']
 repo: ['deb [signed-by=/usr/share/keyrings/jami-archive-keyring.gpg] https://dl.jami.net/nightly/ubuntu_18.04/ ring main', '/etc/apt/sources.list.d/jami.list']
-packages: jami
+packages:
+	- jami
 depends:
 	- gnupg
 	- dirmngr
