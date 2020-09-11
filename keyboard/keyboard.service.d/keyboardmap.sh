@@ -1,5 +1,5 @@
 #!/bin/bash
 
-( /home/sigsve/eos_setup/xkeysnail/set_keyboard.sh & )
-xkeysnail /home/sigsve/eos_setup/xkeysnail/xkeysnail.config.py
+( /etc/systemd/system/keyboardmap.service.d/set_keyboard.sh & )
+xkeysnail /etc/systemd/system/keyboardmap.service.d/xkeysnail.config.py
 
