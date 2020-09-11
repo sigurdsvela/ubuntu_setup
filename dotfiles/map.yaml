@@ -1,4 +1,5 @@
 ## Todo, actually implement this file
 
 .ssh/* : ~/.ssh
-.profile.d/* : ~/.profile.d
+.profile.d/ : ~/.profile.d
+.startup.d/ : ~/.startup.d
