@@ -34,6 +34,7 @@ echo "- Install vscode"
 snap install --classic code > /dev/null
 echo "- Install deja-dub"
 snap install --classic deja-dup > /dev/null
+printf "\nexport PATH=\$PATH:/snap/bin\n"
 
 ## ---- Dropbox
 echo "Installing Dropbox"
