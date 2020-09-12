@@ -26,9 +26,13 @@ sudo ./dotfiles/setup.sh
 
 ## ---- Snaps
 echo "Installing snaps..."
+echo "- Install snapd"
 sudo apt install snapd > /dev/null
+echo "- Install spotify"
 snap install spotify > /dev/null
+echo "- Install vscode"
 snap install --classic code > /dev/null
+echo "- Install deja-dub"
 snap install --classic deja-dup > /dev/null
 
 ## ---- Dropbox
