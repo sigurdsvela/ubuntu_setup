@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "startup.." >> ./startup.log
 
 for f in ./*.startup.sh; do

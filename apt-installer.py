@@ -2,14 +2,6 @@ import os
 import yaml
 from pathlib import Path
 
-
-def slink(src, dst):
-	print(f"Link {src} -> {dst}")
-	Path(dst).mkdir(parent=True)
-	os.system(f"ln -s {src} {dst}")
-
-# Install packages
-
 # - Apt
 print("Installing apt packages")
 aptdir = './pkg/apt.d/'
@@ -48,18 +40,4 @@ for packyaml in apt:
 			print(f"- - Installing {package}")
 			os.system(f"sudo apt install {package} -y &> ./{package}.install.log")
 
-
-# - Dotfiles
-print("Linking dot files")
-with open('./dorfiles/map.yaml') as stream:
-	fmap = yaml.safe_load(stream)
-	for dst in fmap:
-		src = fmap[dst]
-		if (src.endswith('/*')):
-			src = src[:-2] # Ends with /
-			files = os.listdir('./dotfiles/' + src)
-			for f in files:
-				slink(f"$(pwd)/dotfiles/{src}/{f}",f"{dst}/{f}")
-		else:
-			slink(f"$(pwd)/dotfiles/{src}",dst)
 
