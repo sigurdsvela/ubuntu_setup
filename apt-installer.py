@@ -38,6 +38,6 @@ for packyaml in apt:
 
 		for package in apt['packages']:
 			print(f"- - Installing {package}")
-			os.system(f"sudo apt install {package} -y &> ./{package}.install.log")
+			os.system(f"sudo apt install {package} -y > ./dev/null")
 
 
