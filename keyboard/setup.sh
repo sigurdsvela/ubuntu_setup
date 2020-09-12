@@ -1,13 +1,12 @@
 ## Add the custom layout to the "NO" xkb layout file
-sudo echo "\n\n$(cat ./no_mac_custom.xkb)" >> /usr/share/X11/xkb/symbols/no
+echo "- Create custom keybaord map"
+sudo ln -s $(echo pwd)/no_mac_custom.xkb /usr/share/X11/xkb/symbols/no_mac_custom
 
-sudo ln -s $(pwd)/keyboardmap.service /etc/systemd/system/
+echo "- Linking keyboardmap.service -> /etc/systemd/system/"
+sudo ln -s $(echo pwd)/keyboardmap.service /etc/systemd/system/
 
-sudo mkdir /etc/systemd/system/keyboardmap.service.d 
+echo "- Linking keyboardmap.service.d -> /etc/systemd/system/"
+sudo ln -s $(echo pwd)/keyboardmap.service.d /etc/systemd/system/
 
-sudo ln -s $(pwd)/keyboardmap.service.d/keyboardmap.sh /etc/systemd/system/keyboardmap.service.d/
-sudo ln -s $(pwd)/keyboardmap.service.d/set_keyboard.sh /etc/systemd/system/keyboardmap.service.d/
-sudo ln -s $(pwd)/keyboardmap.service.d/xkeysnail.config.py /etc/systemd/system/keyboardmap.service.d/
-
-ln -s ./xhost.sh /etc/lightdm/lightdm.conf.d/xhost.sh
-ln -s ./xhost-enable.conf /etc/lightdm/lightdm.conf.d/xhost-enable.conf
+#ln -s ./xhost.sh /etc/lightdm/lightdm.conf.d/xhost.sh
+#ln -s ./xhost-enable.conf /etc/lightdm/lightdm.conf.d/xhost-enable.conf

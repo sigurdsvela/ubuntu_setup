@@ -1,12 +1,21 @@
 # Essentials
 
 ## --- pip3 git add-apt-repository
-sudo apt install git python3-pip software-properties-common -y
+echo "Installing basics"
+echo "- git"
+sudo apt install git -y 2> /dev/null
+echo "- apt-utils"
+sudo apt install apt-utils -y 2> /dev/null
+echo "- python3"
+sudo apt install python3-pip -y 2> /dev/null
+echo "- software-properties-common"
+sudo apt install software-properties-common -y 2> /dev/null
 ## --- Add 32bit
 sudo dpkg --add-architecture i386
 
-## --- pyyaml
-pip3 install pyyaml
+
+echo "Sensors setup"
+./sensor-setup.sh
 
 
 ## ---- Snaps
@@ -20,13 +29,8 @@ echo
 echo
 
 ## ---- Dropbox
-echo "Installing Dropbox:"
-echo "- Downloading..."
-curl https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2020.03.04_amd64.deb -o db.deb > /dev/null
-echo "- Installing..."
-sudo apt install ./db.deb
-echo "- Cleanup..."
-rm db.deb
+echo "Downloading/Installing Dropbox"
+sudo wget -O /usr/local/bin/dropbox "https://www.dropbox.com/download?dl=packages/dropbox.py"
 
 echo
 echo
@@ -34,7 +38,8 @@ echo
 ## ---- Keyboard
 echo "Setup keyboard"
 sudo ./keyboard/setup.sh
-echo "done"
+echo "Done setting up keyboard"
 
 ## Lets do the rest of this in Python, cause I hatee bash
-sudo -H $HOME python3 ./setup.py
+sudo -H pip3 install pyyaml > /dev/null
+sudo -H python3 ./setup.py
