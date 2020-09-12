@@ -26,8 +26,7 @@ sudo ./dotfiles/setup.sh
 
 ## ---- Snaps
 echo "Installing snaps..."
-#sudo apt install snapd > /dev/null #--DEBUG
-alias snap = "echo dryrun snap"     #--DEBUG
+sudo apt install snapd > /dev/null
 snap install spotify > /dev/null
 snap install --classic code > /dev/null
 snap install --classic deja-dup > /dev/null
@@ -37,5 +36,5 @@ echo "Installing Dropbox"
 sudo apt install ./dist/dropbox.deb -y
 
 ## Lets do the rest of this in Python, cause I hatee bash
-#sudo -H pip3 install pyyaml > /dev/null
-#sudo -H python3 ./apt-installer.py
+sudo -H pip3 install pyyaml > /dev/null
+sudo -H python3 ./apt-installer.py
