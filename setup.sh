@@ -1,5 +1,7 @@
 # Essentials
 
+echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers
+
 ## --- pip3 git add-apt-repository
 echo "Installing basics"
 echo "- git"
