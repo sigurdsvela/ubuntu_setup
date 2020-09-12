@@ -1,5 +1,5 @@
 label: Steam
 repo: multiverse
 packages:
-	- steam
-	- firefox
+    - steam
+    - firefox

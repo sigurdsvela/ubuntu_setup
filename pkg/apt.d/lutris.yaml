@@ -1,4 +1,4 @@
 label: Luris
 repo: ppa:lutris-team/lutris
 packages:
-	- lutris
+    - lutris

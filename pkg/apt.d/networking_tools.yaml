@@ -1,5 +1,5 @@
 lable: Networking Tools
 packages:
-	- iperf3
-	- speedtest-cli
-	- net-tools
+    - iperf3
+    - speedtest-cli
+    - net-tools
