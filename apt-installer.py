@@ -13,6 +13,8 @@ for packyaml in apt:
 		apt = yaml.safe_load(stream)
 		if 'label' in apt:
 			print(f"- {apt['label']}")
+		else:
+			print(f"- NO_LABEL ({packyaml})")
 
 		if 'ckey' in apt:
 			print("- - Download and add Repo key")
