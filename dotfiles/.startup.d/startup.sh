@@ -1,9 +1,6 @@
 #!/bin/bash
 
-echo "startup.." >> ./startup.log
-
-for f in ./*.startup.sh; do
-	echo $f >> ./startup.log
-	$f >> $f.log
+for f in $(dirname $0)/*.startup.sh; do
+	$f
 done
 
