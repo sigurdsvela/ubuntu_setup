@@ -11,7 +11,8 @@ for packyaml in apt:
 		continue
 	with open(aptdir + packyaml, 'r') as stream:
 		apt = yaml.safe_load(stream)
-		print(f"- {apt['label']}")
+		if 'label' in apt:
+			print(f"- {apt['label']}")
 
 		if 'ckey' in apt:
 			print("- - Download and add Repo key")
