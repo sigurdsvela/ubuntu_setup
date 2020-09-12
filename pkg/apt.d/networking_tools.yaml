@@ -1,4 +1,4 @@
-lable: Networking Tools
+label: Networking Tools
 packages:
     - iperf3
     - speedtest-cli
