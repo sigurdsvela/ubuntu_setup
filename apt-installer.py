@@ -16,25 +16,25 @@ for packyaml in apt:
 		if 'ckey' in apt:
 			print("- - Download and add Repo key")
 			if isinstance(apt['ckey'], list):
-				print(f"curl -fsSL {apt['ckey'][0]} | sudo tee {apt['ckey'][1]}")
-				os.system(f"curl -fsSL {apt['ckey'][0]} | sudo tee {apt['ckey'][1]}")
+				print(f"curl -fsSL {apt['ckey'][0]} | sudo tee {apt['ckey'][1]} > /dev/null")
+				os.system(f"curl -fsSL {apt['ckey'][0]} | sudo tee {apt['ckey'][1]} > /dev/null")
 			else:
-				print(f"curl -fsSL {apt['ckey']} | sudo apt-key add -")
-				os.system(f"curl -fsSL {apt['ckey']} | sudo apt-key add -")
+				print(f"curl -fsSL {apt['ckey']} | sudo apt-key add - > /dev/null")
+				os.system(f"curl -fsSL {apt['ckey']} | sudo apt-key add - > /dev/null")
 
 		if 'key' in apt:
 			print("- - Add Repo key")
-			os.system(f"sudo {apt['key']} | sudo apt-key add -")
+			os.system(f"sudo {apt['key']} | sudo apt-key add - > /dev/null")
 
 		if 'repo' in apt:
 			print("- - Add Repo")
 			if 'ckey' in apt and isinstance(apt['ckey'], list):
-				os.system(f"sudo add-apt-repository \"[signed-by={apt['ckey'][1]}] {apt['repo']}\" -y")
+				os.system(f"sudo add-apt-repository \"[signed-by={apt['ckey'][1]}] {apt['repo']}\" -y > /dev/null")
 			else:
-				os.system(f"sudo add-apt-repository \"{apt['repo']}\" -y")
+				os.system(f"sudo add-apt-repository \"{apt['repo']}\" -y > /dev/null")
 
 		print("- - Apt update")
-		os.system("sudo apt update")
+		os.system("sudo apt update > /dev/null")
 
 		for package in apt['packages']:
 			print(f"- - Installing {package}")
