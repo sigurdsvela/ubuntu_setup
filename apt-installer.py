@@ -11,10 +11,9 @@ for packyaml in apt:
 		continue
 	with open(aptdir + packyaml, 'r') as stream:
 		apt = yaml.safe_load(stream)
-		if 'label' in apt:
-			print(f"- {apt['label']}")
-		else:
-			print(f"- NO_LABEL ({packyaml})")
+		label = apt['label'] if 'label' in apt else f"NO LABEL ({packyaml})"
+
+		print(f"- Installing {label}")
 
 		if 'ckey' in apt:
 			print("- - Download and add Repo key")
@@ -42,5 +41,7 @@ for packyaml in apt:
 		for package in apt['packages']:
 			print(f"- - Installing {package}")
 			os.system(f"sudo apt install {package} -y > /dev/null")
+
+		print(f"- Done ({label})")
 
 
