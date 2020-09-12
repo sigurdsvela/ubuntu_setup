@@ -29,9 +29,9 @@ for packyaml in apt:
 		if 'repo' in apt:
 			print("- - Add Repo")
 			if 'ckey' in apt and isinstance(apt['ckey'], list):
-				os.system(f"sudo add-apt-repository [signed-by={apt['ckey'][1]}]  {apt['repo']} -y")
+				os.system(f"sudo add-apt-repository \"[signed-by={apt['ckey'][1]}] {apt['repo']}\" -y")
 			else:
-				os.system(f"sudo add-apt-repository {apt['repo']} -y")
+				os.system(f"sudo add-apt-repository \"{apt['repo']}\" -y")
 
 		print("- - Apt update")
 		os.system("sudo apt update")
