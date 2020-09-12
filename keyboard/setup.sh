@@ -2,6 +2,10 @@
 echo "- Create custom keybaord map"
 sudo ln -s $(pwd)/keyboard/no_mac_custom.xkb /usr/share/X11/xkb/symbols/no_mac_custom
 
+echo "- Link default keyboard config"
+sudo mv /etc/default/keyboard /etc/default/keyboard.bak
+sudo ln -s $(pwd)/keyboard/keyboard.config /etc/default/keyboard
+
 echo "- Linking keyboardmap.service -> /etc/systemd/system/"
 sudo ln -s $(pwd)/keyboard/keyboardmap.service /etc/systemd/system/
 
