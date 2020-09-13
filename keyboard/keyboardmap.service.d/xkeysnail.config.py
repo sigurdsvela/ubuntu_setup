@@ -49,3 +49,8 @@ define_keymap('Io.elementary.terminal', {
 	K("Super-c"): K("C-Shift-c"),
 	K("Super-v"): K("C-Shift-v")
 })
+
+define_keymap(re.compile("code|vscode", re.IGNORECASE), {
+	K("Super-Alt-DOWN") : K("Super-RAlt-DOWN"),
+	K("Super-Alt-UP") : K("Super-RAlt-UP")
+})

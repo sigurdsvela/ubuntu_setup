@@ -1,2 +1,2 @@
 sleep 5
-setxkbmap -config ~/.xkb/config
+setxkbmap -config /home/sigsve/.xkb.d/
