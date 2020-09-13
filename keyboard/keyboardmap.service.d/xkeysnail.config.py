@@ -16,6 +16,11 @@ define_keymap(None, {
 	K("M-Shift-LEFT"): K("C-Shift-LEFT"),
 	K("M-Shift-RIGHT"): K("C-Shift-Right"),
 
+	K("M-BACKSPACE"): K("C-BACKSPACE"), # Delete to beginning of word
+	K("M-DELETE"): K("C-DELETE"), # Delete to end of word
+	K("Super-BACKSPACE"): K("C-U"), # Delete to beginning of line
+
+
 	# Clippboard
 	K("Super-c"): K("C-c"), #Copy
 	K("Super-v"): K("C-v"), #Paste
@@ -42,6 +47,12 @@ define_keymap(None, {
 	K('Super-F'): K('C-F'), # Find
 	K('Super-W'): K('C-W'), # Close Window
 	K('Super-Q'): K('C-Q'), # Close Application
+})
+
+define_keymap(re.compile("Firefox", re.IGNORECASE), {
+	K('Super-T'): K('C-T'),
+	K('Super-Shift-T'): K('C-Shift-T'),
+	K('Super-Enter'): K('Alt-Enter'),
 })
 
 
