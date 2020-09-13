@@ -6,6 +6,10 @@ echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers
 echo "Installing basics"
 echo "- git"
 sudo apt install git -y &> /dev/null
+
+git config --global user.email "sigurdbergsvela@gmail.com"
+git config --gloabl user.name "Sigurd Berg Svela"
+
 echo "- apt-utils"
 sudo apt install apt-utils -y &> /dev/null
 echo "- python3"
