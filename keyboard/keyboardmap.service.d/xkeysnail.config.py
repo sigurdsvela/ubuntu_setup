@@ -34,7 +34,8 @@ define_keymap(None, {
 	K("C-RIGHT") : K("Super-RIGHT"), #Wordspace Right
 	K("C-UP") : K("Super-S"), #Show All Windows
 	K("C-DOWN") : K("Super-S"), #Show All Windows
-	K("Super-Tab") : K("Alt-Tab"), #Show All Windows
+	K("Super-Tab") : K("RAlt-Tab"), #Show All Windows
+	K("Super-Shift-Tab") : K("RAlt-Shift-Tab"), #Show All Windows
 
 
 	# Application Controll
