@@ -49,3 +49,8 @@ sudo apt install ./dist/dropbox.deb -y
 ## Lets do the rest of this in Python, cause I hatee bash
 sudo -H pip3 install pyyaml > /dev/null
 sudo -H python3 ./apt-installer.py
+
+
+ssh-keygen
+sudo systemctl enable ssh
+sudo service ssh start
