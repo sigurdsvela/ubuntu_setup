@@ -17,7 +17,7 @@ sudo dpkg --add-architecture i386
 
 
 echo "Sensors setup"
-sudo ./sensor-setup.sh
+sudo ./sensors/setup.sh
 
 echo "Keyboard Setup"
 sudo ./keyboard/setup.sh
