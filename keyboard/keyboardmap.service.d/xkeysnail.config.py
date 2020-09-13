@@ -2,7 +2,7 @@ import re
 from xkeysnail.transform import *
 
 define_keymap(None, {
-	# Line Start/End
+	# Cursor Moovment
     K("Super-LEFT"): K("home"),
 	K("Super-RIGHT"): K("end"),
 	K("Super-Shift-LEFT"): K("Shift-home"),
@@ -11,13 +11,40 @@ define_keymap(None, {
 	K("Super-DOWN"): K("PAGE_DOWN"),
 	K("Shift-Super-UP"): K("Shift-PAGE_UP"),
 	K("Shift-Super-DOWN"): K("Shift-PAGE_DOWN"),
+	K("M-LEFT"): K("C-LEFT"),
+	K("M-RIGHT"): K("C-RIGHT"),
+	K("M-Shift-LEFT"): K("C-Shift-LEFT"),
+	K("M-Shift-RIGHT"): K("C-Shift-Right"),
 
-	# Line Start/End
-    K("M-LEFT"): K("C-LEFT"),
-	K("M-RIGHT"): K("Super-RIGHT"),
-	K("M-Shift-LEFT"): K("Super-Shift-LEFT"),
-	K("M-Shift-RIGHT"): K("Super-Shift-Right"),
+	# Clippboard
+	K("Super-c"): K("C-c"), #Copy
+	K("Super-v"): K("C-v"), #Paste
+	K("Super-x"): K("C-x"), #Cut
 
-	K("LSuper-SPACE"): K("LC-SPACE"),
-	K("LC-SPACE"): K("LSuper-SPACE"),
+	# UndoRedo
+	K("Super-z"): K("C-z"), #Undo
+	K("Super-Shift-z"): K("C-Shift-z"), #Redo
+
+	# Save
+	K("Super-S"): K("C-S"), #Save
+	K("Super-Shift-S"): K("C-Shift-S"), #Save As
+
+	# Window Controll
+	K("C-LEFT") : K("Super-LEFT"), #Workspace Left
+	K("C-RIGHT") : K("Super-RIGHT"), #Wordspace Right
+	K("C-UP") : K("Super-S"), #Show All Windows
+	K("C-DOWN") : K("Super-S"), #Show All Windows
+	K("Super-Tab") : K("Alt-Tab"), #Show All Windows
+
+
+	# Application Controll
+	K('Super-F'): K('C-F'), # Find
+	K('Super-W'): K('C-W'), # Close Window
+	K('Super-Q'): K('C-Q'), # Close Application
+})
+
+
+define_keymap('Io.elementary.terminal', {
+	K("Super-c"): K("C-Shift-c"),
+	K("Super-v"): K("C-Shift-v")
 })
