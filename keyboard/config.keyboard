@@ -1,0 +1,10 @@
+# KEYBOARD CONFIGURATION FILE
+
+# Consult the keyboard(5) manual page.
+
+XKBMODEL="macintosh"
+XKBLAYOUT="no_custom_mac"
+XKBVARIANT="basic"
+XKBOPTIONS="lv3:alt_switch"
+
+BACKSPACE="guess"
