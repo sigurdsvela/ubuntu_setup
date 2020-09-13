@@ -5,6 +5,6 @@
 XKBMODEL="macintosh"
 XKBLAYOUT="no_mac_custom"
 XKBVARIANT="basic"
-XKBOPTIONS="lv3:alt_switch"
+XKBOPTIONS="lv3:lalt_switch"
 
 BACKSPACE="guess"

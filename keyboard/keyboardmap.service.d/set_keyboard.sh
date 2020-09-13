@@ -1,2 +1,2 @@
 sleep 5
-setxkbmap -config /etc/default
+setxkbmap -config ~/.xkb/config
