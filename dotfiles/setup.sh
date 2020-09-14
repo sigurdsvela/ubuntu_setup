@@ -5,7 +5,7 @@ for f in ./.ssh/*; do ln -s $(pwd)/dotfiles/$f ~/.ssh; done
 ln -s $(pwd)/dotfiles/.startup.d ~/
 
 ## -- XKB.d -- ##
-ln -s $(pwd)/dotfiles/.startup.d ~/
+ln -s $(pwd)/dotfiles/.xkb.d ~/
 
 ## -- PROFILE.D -- ##
 # Run all .profile.d .sh files on .bashrc

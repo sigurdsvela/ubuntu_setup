@@ -1,8 +1,4 @@
-# KEYBOARD CONFIGURATION FILE
-
-# Consult the keyboard(5) manual page
-
-XKBMODEL="macintosh"
+XKBMODEL="pc105"
 XKBLAYOUT="no_mac_custom"
 XKBVARIANT="basic"
 XKBOPTIONS="lv3:lalt_switch"

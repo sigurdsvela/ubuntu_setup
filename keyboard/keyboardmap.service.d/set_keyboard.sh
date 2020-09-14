@@ -1,2 +1,2 @@
 sleep 5
-setxkbmap -config /home/sigsve/.xkb.d/
+setxkbmap -layout "no_mac_custom(basic)" -model "macintosh" -option "lv3:lalt_switch"
