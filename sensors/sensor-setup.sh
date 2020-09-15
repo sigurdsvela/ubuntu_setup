@@ -1,5 +1,4 @@
-# Kernal parameter, setup lax
-sudo printf "acpi_enforce_resources=lax\n" > /etc/sysctl.d/sensor.conf
+
 
 # Setup it87 module, and force is
 modprobe it87 force_id 0x8686
