@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/sigsve/.startup.d/startup.sh
+Hidden=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true
+Terminal=true
+Name[en]=Startup.d
+Name=Startup.d

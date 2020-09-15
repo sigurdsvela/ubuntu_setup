@@ -4,7 +4,6 @@ Description=xkeysnail
 [Service]
 Type=simple
 KillMode=process
-ExecStartPre=/bin/bash -c "xhost +"
 ExecStart=/usr/bin/sudo -H /bin/bash /etc/systemd/system/keyboardmap.service.d/keyboardmap.sh
 ExecStop=/usr/bin/sudo /usr/bin/killall xkeysnail
 Restart=on-failure
