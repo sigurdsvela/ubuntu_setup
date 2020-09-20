@@ -40,7 +40,7 @@ echo "- Install spotify"
 snap install spotify > /dev/null
 echo "- Install vscode"
 snap install --classic code > /dev/null
-printf "\nexport PATH=\$PATH:/snap/bin\n"
+export PATH=$PATH:/snap/bin
 
 ## ---- Dropbox
 echo "Installing Dropbox"
