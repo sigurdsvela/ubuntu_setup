@@ -9,6 +9,7 @@ ln -s $(pwd)/dotfiles/.xkb.d ~/
 
 ## -- .config/autostart -- ##
 # Starts the .startup scripts
+mkdir -p ~/.config/autostart &> /dev/null
 ln -s $(pwd)/dotfiles/.config/autostart/startup.sh.desktop ~/.config/autostart/
 
 ## -- PROFILE.D -- ##
