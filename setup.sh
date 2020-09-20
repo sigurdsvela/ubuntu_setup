@@ -37,9 +37,9 @@ echo "Installing snaps..."
 echo "- Install snapd"
 sudo apt install snapd -y > /dev/null
 echo "- Install spotify"
-snap install spotify > /dev/null
+sudo snap install spotify > /dev/null
 echo "- Install vscode"
-snap install --classic code > /dev/null
+sudo snap install --classic code > /dev/null
 export PATH=$PATH:/snap/bin
 
 ## ---- Dropbox
